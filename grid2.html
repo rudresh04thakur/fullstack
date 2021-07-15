@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <title>Grid 2</title>
+    <style>
+        @media screen and (max-width:600px) {
+            body {
+                background-color: red;
+            }
+
+            .col-3 {
+                width: calc(100vw);
+                background-color: yellow;
+                float: left;
+                height: 100%;
+            }
+
+
+            .col-1 {
+                width: calc(100vw / 12);
+                background-color: silver;
+                float: left;
+                height: 100%;
+            }
+
+            .col-2 {
+                width: calc(calc(100vw / 12) * 2);
+                background-color: red;
+                float: left;
+                height: 100%;
+            }
+
+
+            .col-4 {
+                width: calc(calc(100vw / 12) * 4);
+                background-color: green;
+                float: left;
+                height: 100%;
+            }
+
+            .col-5 {
+                width: calc(calc(100vw / 12) * 5);
+                background-color: blue;
+                float: left;
+                height: 100%;
+            }
+
+            .col-6 {
+                width: calc(calc(100vw / 12) * 6);
+                background-color: lightblue;
+                float: left;
+                height: 100%;
+            }
+
+            .col-8 {
+                width: calc(calc(100vw / 12) * 8);
+                background-color: lightcoral;
+                float: left;
+                height: 100%;
+            }
+
+            .col-9 {
+                width: calc(calc(100vw / 12) * 9);
+                background-color: pink;
+                float: left;
+                height: 100%;
+            }
+
+            .col-10 {
+                width: calc(calc(100vw / 12) * 10);
+                background-color: brown;
+                float: left;
+                height: 100%;
+            }
+
+            .col-11 {
+                width: calc(calc(100vw / 12) * 11);
+                background-color: gray;
+                float: left;
+                height: 100%;
+            }
+
+            .col-12 {
+                width: calc(100vw);
+                background-color: orange;
+                float: left;
+                height: 100%;
+            }
+
+        }
+
+        @media screen and (min-width:601px) and (max-width: 1536px) {
+            body {
+                background-color: rgb(80, 139, 125);
+            }
+
+            .col-1 {
+                width: calc(100vw / 12);
+                background-color: silver;
+                float: left;
+                height: 100%;
+            }
+
+            .col-2 {
+                width: calc(calc(100vw / 12) * 2);
+                background-color: red;
+                float: left;
+                height: 100%;
+            }
+
+            .col-3 {
+                width: calc(calc(100vw / 12) * 3);
+                background-color: yellow;
+                float: left;
+                height: 100%;
+            }
+
+            .col-4 {
+                width: calc(calc(100vw / 12) * 4);
+                background-color: green;
+                float: left;
+                height: 100%;
+            }
+
+            .col-5 {
+                width: calc(calc(100vw / 12) * 5);
+                background-color: blue;
+                float: left;
+                height: 100%;
+            }
+
+            .col-6 {
+                width: calc(calc(100vw / 12) * 6);
+                background-color: lightblue;
+                float: left;
+                height: 100%;
+            }
+
+            .col-8 {
+                width: calc(calc(100vw / 12) * 8);
+                background-color: lightcoral;
+                float: left;
+                height: 100%;
+            }
+
+            .col-9 {
+                width: calc(calc(100vw / 12) * 9);
+                background-color: pink;
+                float: left;
+                height: 100%;
+            }
+
+            .col-10 {
+                width: calc(calc(100vw / 12) * 10);
+                background-color: brown;
+                float: left;
+                height: 100%;
+            }
+
+            .col-11 {
+                width: calc(calc(100vw / 12) * 11);
+                background-color: gray;
+                float: left;
+                height: 100%;
+            }
+
+            .col-12 {
+                width: calc(100vw);
+                background-color: orange;
+                float: left;
+                height: 100%;
+            }
+
+            body {
+                /* margin: 0px; */
+            }
+
+            .row {
+                width: calc(100vw);
+                margin-left: -8px;
+                margin-right: -8px;
+            }
+
+            .clearfloat {
+                float: none;
+                height: 20px;
+            }
+
+            .animate{
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background-color: goldenrod;
+                
+                animation-name: rotate;
+                animation-duration: 2s;
+                animation-delay: 3s;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes rotate {
+                from {transform: rotate(0deg)}
+                to {transform: rotate(360deg)}
+                /* from {background-color: yellow;}
+                to {background-color: red;}
+                0% {top:0px;left:0px}
+                25% {top:0px;left:100px}
+                50% {top:100px;left:100px}
+                75% {top:100px;left:0px}
+                100% {top:0px;left:0px} */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-6">
+            <h2>Col 1</h2>
+        </div>
+        <div class="col-3">
+            <h2>Col 3</h2>
+        </div>
+        <div class="col-2">
+            <h2>Col 3</h2>
+        </div>
+        <div class="col-1">
+            <h2>Col 3</h2>
+        </div>
+    </div>
+
+    <div class="row" style="height: 200px;">
+        <div class="col-4">Col-4</div>
+        <div class="col-8">Col-8</div>
+    </div>
+
+    <div class="row">Hi</div>
+    <div class="row" style="height: 100px;">
+        <div class="col-4">Col-4</div>
+        <div class="col-4">Col-4</div>
+        <div class="col-4">Col-4</div>
+    </div>
+    <div class="row">
+        <div class="animate">Animation</div>
+    </div>
+</body>
+
+</html>

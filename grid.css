@@ -1,5 +1,11 @@
 /* iPhone 7/6 -- 414x736 */
 
+:root{
+    --red : rgb(255,0,0);
+    --col-1: 38px;
+    --screen-w: 960px;
+}
+
 body{
     margin: 0px;
     padding: 0px;
@@ -7,73 +13,81 @@ body{
 
 @media screen and (max-width:415px) {
     body{
-        background-color: red;
+        background-color: var(--red)
     }
 }
 
 /* laptop 1920 x 1080 */
 
-@media screen and (min-width:415px) and (max-width:1920px) {
+
+@media screen and (min-width:415px) {
+   
+    body{
+        background-color: yellow;
+        
+    }
     .row{
-        width: 100% !important;
+        width: var(--screen-w) !important;
         /* padding: 15px; */
         /* 1200px ==  100px== col-1
                   (1200/12)*11 = 1100 */
     
-    
+        
     }
     .col-12{
         float: left;
-        width: 100%
+        width: var(--screen-w);
     }
     .col-11{
         float: left;
-        width: calc(1536px - calc(1 * calc(1536px / 12)));
+        width: 880px;
+
+
+        /* 12 - (1)  =11*/
     }
     .col-10{
         float: left;
-        width: calc(1536px - calc(2 * calc(1536px / 12)));
+        width: 800px;
     }
     .col-9{
         float: left;
-        width: calc(1536px - calc(3 * calc(1536px / 12)));
+        width: 720px;
     }
     .col-8{
         float: left;
-        width: calc(1536px - calc(4 * calc(1536px / 12)));
+        width: 640px;
     }
     .col-7{
         
-        width: calc(1536px - calc(5 * calc(1536px / 12)));
-       
-        float: left;;
+        width: 560px;
+        float: left;
     }
     .col-6{
         float: left;
-        width: calc(1536px - calc(6 * calc(1536px / 12)));
+        width: 480px;
 
     }
     .col-5{
         float: left;
-        width: calc(1536px - calc(7 * calc(1536px / 12)));
+        width: 400px;
         
     }
     .col-4{
         float: left;
-        width: calc(1536px - calc(8 * calc(1536px / 12)));
+        width: 320px;
         
     }
     .col-3{
         float: left;
-        width: calc(1536px - calc(9 * calc(1536px / 12)));
+        width: 240px;
     }
     .col-2{
         float: left;
-        width: calc(1536px - calc(10 * calc(1536px / 12)));
+        width: 160px;
     }
     .col-1{
         float: left;
-        width: calc(1536px - calc(11 * calc(1536px / 12)));
+        width: 80px;
         
     }
 }

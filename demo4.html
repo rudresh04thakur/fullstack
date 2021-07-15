@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        header{
+            background-color: rgba(248, 161, 161, 0.6);
+            min-height: 20px;
+            position: absolute;
+            width: 100%;
+        }
+        .menu{
+            float: left;
+            list-style-type: none;
+            /* position: relative; */
+            /* min-height: 20px; */
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-right: 50px;
+        }
+        .menu-right{
+            float: right;
+            list-style-type: none;
+            /* position: relative; */
+            /* min-height: 20px; */
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-right: 50px;
+        }
+        .menu>li,.menu-right>li{
+            float: left;
+            font-size: 24px;
+            padding:10px;
+        }
+        .menu>li>a,.menu-right>li>a{
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+        }
+        .menu>li:hover,.menu-right>li:hover{
+            background-color: yellow;
+            border-radius: 10px;
+        }
+
+        .loader{
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            top:calc(50vh - 40px);
+            left: calc(50vw - 40px);
+            position: absolute;
+            border-radius: 50%;
+            
+        }
+        .animation{
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            top:calc(50vh - 50px);
+            left: calc(50vw - 50px);
+            background-image: linear-gradient(90deg, #020024 0%, #02025a 35%, #00d5ffcc 100%);
+            animation-name: rotate;
+            animation-duration: 2s;
+            animation-iteration-count: infinite
+        }
+
+        /* 360 / 10 =33px  */
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+            /* 0% {background-color: red; left: TBpx;top:KBpx}
+            2% {background-color: red; left: TBpx;top:KBpx}
+            4% {background-color: red; left: TBpx;top:KBpx}
+            6% {background-color: red; left: TBpx;top:KBpx}
+            8% {background-color: red; left: TBpx;top:KBpx}
+            10% {background-color: red; left: TBpx;top:KBpx}
+            12% {background-color: red; left: TBpx;top:KBpx}
+            14% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+            GB% {background-color: red; left: TBpx;top:KBpx}
+              */
+        }
+
+
+        .outter{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            top:calc(50vh - 50px);
+            left: calc(50vw - 50px);
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .shape{
+            width: 25px;
+            height: 25px;
+            background-color: yellow;
+    
+            /* animation-name: gb;
+            animation-duration: 2s;
+            animation-iteration-count: 1; */
+            position:relative;
+            border-radius: 99% 0% 99% 0%;
+        }
+        .shape1{
+            top:25px;
+            left:50px;
+        }
+        
+        .shape2{
+            top:19px;
+            left:55px;
+            transform: rotate(60deg);
+        }
+        .shape3{
+            top:8px ;
+            left:41px;
+            transform: rotate(120deg);
+        }
+        .shape4{
+            top:-22px;
+            left:22px;
+            transform: rotate(180deg);
+        }
+        .shape5{
+            top: -66px;
+            left:17px;
+            transform: rotate(240deg);
+        }
+        .shape6{
+            top:-105px;
+            left:31px;
+            transform: rotate(300deg);
+        }
+        @keyframes gb {
+            from{ transform: rotate(0deg); }to{
+                
+                transform: rotate(360deg);
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <ul class="menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">contact</a></li>
+        </ul>
+        <ul class="menu-right">
+            <li><a href="">Login</a></li>
+            <li><a href="">Register</a></li>
+        </ul>
+    </header>
+    <div class="container">
+        
+            <div class="animation"></div>
+            <div class="loader"></div>
+
+            <!-- <div class="outter">
+                <div class="shape shape1"></div>
+                <div class="shape shape2"></div>
+                <div class="shape shape3"></div>
+                <div class="shape shape4"></div>
+                <div class="shape shape5"></div>
+                <div class="shape shape6"></div>
+            </div> -->
+
+    </div>
+    
+</body>
+</html>

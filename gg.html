@@ -1,0 +1,284 @@
+<html>
+
+<head>
+    <title>Site Title</title>
+    <style>
+        @font-face {
+            font-family: "gggggg";
+
+            src: url('./Aarti.ttf');
+        }
+
+        .gb {
+            color: brown;
+            background-color: rgba(128, 255, 0, 0.2);
+            /* opacity: 0.2; */
+            /* font-family: "gggggg"; */
+            font-size: 32px;
+            font-weight: bold;
+            font-style: italic;
+            line-height: 42px;
+            text-transform: capitalize;
+            /* letter-spacing: 20px;
+                word-spacing: 34px; */
+            text-align: left;
+            text-indent: 70px;
+            text-shadow: 0px 0px 10px red;
+        }
+
+        .gb::first-letter {
+            font-family: "Aarti";
+        }
+
+        .gb:hover {
+            background-color: rgba(128, 255, 0, 1);
+            ;
+        }
+
+        body {
+            background-image: url('./bg2.png');
+        }
+
+        .box {
+            background-color: red;
+            min-height: 40px;
+            max-height: 100px;
+            max-width: 100px;
+            margin-left: 50px;
+            margin-right: 50px;
+            /* display: none; */
+            /* border-width: 40px; */
+            border-radius: 50%;
+            /* border-style: solid;
+                border-image: url(./mail.png); */
+        }
+
+        .list>li {
+            list-style: decimal inside;
+
+            float: left;
+            margin: 5px;
+            padding: 10px;
+            background-color: green;
+        }
+
+        .GB-TABLE {
+            border: 2px solid red;
+            empty-cells: hide;
+            border-spacing: 10px 20px;
+        }
+
+        .GB-TABLE td {
+            border: 2px solid yellow;
+            padding: 10px;
+        }
+
+        .GB-TABLE th {
+            border: 2px solid yellow;
+        }
+
+        .name {
+
+            /* background-image: url(./mail.png);
+                background-repeat: no-repeat;
+                background-position: 5px;
+                background-size: 15px; */
+            padding-left: 30px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            outline: none;
+
+        }
+
+        .email {
+            background-image: url(./mail.png);
+            background-repeat: no-repeat;
+            background-position: 5px;
+            background-size: 15px;
+            padding-left: 30px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            outline: none;
+        }
+
+        .mobile {
+            background-image: url(./mobile.png);
+            background-repeat: no-repeat;
+            background-position: 5px;
+            background-size: 15px;
+            padding-left: 30px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            outline: none;
+            cursor: nwse-resize;
+        }
+        .outer{
+            width: 800px;
+            background-color: green;
+            left: 30px;
+            position: absolute;
+        }
+
+        .layout {
+            width: 300px;
+            left: 100px;
+            position: relative;
+                /* margin-left: calc(50vw - 150px);
+                position: relative; */
+        }
+        .g1{
+            background-color: orange;
+            width: 100px;
+            height: 100px;
+            left:0px;
+            top:0px;
+            z-index: 2;
+            position: absolute;
+        }
+        .g2{
+            background-color: silver;
+            width: 100px;
+            height: 100px;
+            left:20px;
+            top:20px;
+            position: absolute;
+            z-index: 1;
+        }
+        .g3{
+            background-color: green;
+            width: 100px;
+            height: 100px;
+            left:40px;
+            top:40px;
+            position: absolute;
+        }
+        .col-1{
+            float: left;
+            width: calc(48vw);
+        }
+        .gr{
+            width: 400px;
+            height: 200px;
+            background-image: radial-gradient(closest-side at 50% 50%,white,silver,black);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gr"></div>
+    <form>
+        <table>
+            <tr>
+                <td><label>Name</label></td>
+                <td><input class="name" placeholder="Full Name"></td>
+            </tr>
+            <tr>
+                <td><label>Email</label></td>
+                <td><input class="email" placeholder="Email"></td>
+            </tr>
+            <tr>
+                <td><label>Mobile</label></td>
+                <td><input class="mobile" placeholder="Mobile"></td>
+            </tr>
+
+        </table>
+
+
+    </form>
+    <!-- <div class="outer">
+        <p class="layout">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos illum libero quo!
+            Accusamus laboriosam consectetur dolores? Illo, quibusdam. Doloremque autem sunt sequi perferendis quibusdam
+            dolor debitis a aliquam qui veniam.</p>
+    </div> -->
+    <div class="g1"> </div>
+    <div class="g2"> </div>
+    <div class="g3"> </div>
+
+    <br><br>
+    <div class="col-1">
+        <H2>Col 1</H2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus iste odio corrupti animi dicta excepturi optio corporis sint debitis officiis voluptas maiores sunt vero, fuga nihil voluptates. Odio, sunt beatae!</p>
+    </div>
+    <div class="col-1">
+        <H2>Col 2</H2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas laboriosam dolore vero quibusdam iusto, itaque illum labore impedit eveniet atque, voluptatum consectetur ex libero necessitatibus corporis soluta placeat, quidem aspernatur.    </p>
+    </div>
+    <ul class="list">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+    <table class="GB-TABLE">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>City</th>
+                <th>Contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Gopal</td>
+                <td>Nanded</td>
+                <td>8983939246</td>
+
+            </tr>
+            <tr>
+                <td>Gopal</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+        </tbody>
+    </table>
+    <div class="box">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque distinctio eum harum placeat
+        illum, perferendis fugiat adipisci laborum tempore sapiente totam architecto in. Assumenda molestias fugit qui
+        delectus rerum at.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cum, vero dolorem libero rerum asperiores, unde
+        quod velit culpa tempore, quidem voluptatibus ipsum porro cumque cupiditate. Fuga quasi dignissimos maiores!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quam eum, fugit a veniam ipsa quis, natus
+        dolor repellendus architecto deserunt. Quis temporibus ipsam nemo ipsa ex maiores delectus quasi?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem nostrum minus obcaecati fugiat magni! Illo quae
+        consectetur officia dolorum ipsum maxime vitae quidem vero adipisci facilis repudiandae, nemo nesciunt eaque.
+    </div>
+    <p class="gb">gaao paala Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore at laborum dolores
+        suscipit vero praesentium blanditiis quod totam distinctio non, culpa sit dolorum itaque cupiditate impedit quia
+        nisi accusantium facilis.</p>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    <p>Lorem ipsum <b>Gopal </b>dolor,<em>Nanded</em> sit amet consectetur adipisicing elit. Quos quam assumenda neque
+        veniam, doloremque reiciendis itaque molestias esse? Ex ut ipsum velit pariatur quam maxime saepe, consequatur
+        rem facilis praesentium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem molestias quisquam
+        repellendus aperiam architecto voluptates alias ut consequuntur illo. Facilis, nesciunt impedit! Soluta cumque
+        quibusdam, sed hic odit nihil maxime?</p>
+    <p><q>Lorem ipsum</q> <i>Thakur </i>dolor, sit amet consectetur adipisicing elit. Voluptatum atque, consectetur
+        excepturi tempora earum iste corrupti, nostrum laudantium inventore tempore, nihil ipsam. Praesentium impedit
+        assumenda distinctio necessitatibus perspiciatis, ipsa tenetur?
+        <abbr title="National Aeronautics and Space Administration">NASA</abbr>
+    </p>
+    <address>Nanded Maharashtra</address>
+    He <ins>is</ins> <del>are</del> a boy
+    Discount -- <s>300</s> 200
+    <br>
+    <br>
+    H<sub>2</sub>O
+    <br>
+    X<sup>2</sup>
+    <br>
+    30<sup>th</sup>
+    <br>
+    <br>
+    <hr>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quia hic sunt, consequatur sapiente ipsum iste.
+    Vitae, excepturi dolorem, laboriosam nihil ducimus ipsam culpa eius, similique cumque minus doloribus accusamus.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ex inventore quod eos. Similique mollitia labore
+    repudiandae nulla dignissimos voluptas autem delectus officiis totam harum nemo, voluptatum, fugit iure hic!
+</body>
+
+</html>

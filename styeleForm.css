@@ -1,0 +1,77 @@
+/*  tag -- tag
+            id -- #  -- i must be unique
+            class -- .
+            attribute -- tag[attr='value'] */
+            body {
+                background-image: url('./bg2.png');
+                /* background-size: cover; */
+                margin: 0px;
+                padding: auto;
+                
+            }
+            .form-wrapper{
+                /* border: 5px double black; */
+                border-radius: 50px;
+                width: 400px;
+                /* height: 400px; */
+                padding: 20px;
+                margin-left: 35%;
+                padding-bottom: 60px;
+                /* margin-top: 10%; */
+                margin-top: calc(50vh - 200px);
+                background-color: rgba(216,112,147,0.35);
+                /* color: pink; */
+                /* opacity: 0.3; */
+                box-shadow: 10px 10px 10px palevioletred;
+            }
+    
+            .form-wrapper label{
+                display: block;
+                font-size: 20px;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+    
+            .form-wrapper>form>.input-group{
+                padding: 10px;
+                margin: 10px;
+            }
+    
+    
+            .form-wrapper>form>.input-group>input:focus{
+                outline: none !important;
+                border: 2px solid pink;
+                box-shadow: 0 0 5px pink;
+            }
+    
+    
+            .form-wrapper>form>.input-group>input{
+                width: 100%;
+                font-size: 20px;
+                padding: 5px;
+                border: none;
+                border-radius: 3px;
+            }
+            .form-wrapper hr{
+                color: pink;
+            }
+            .form-wrapper>form>.input-group>button{
+                font-size: 20px;
+    
+                float: right;
+                margin-right: 10px;
+                /* padding-top: 5px;
+                padding-right: 15px;
+                padding-bottom: 5px;
+                padding-left: 15px;
+                 */
+                /* shorthand top-right-bottom-left */
+                padding: 5px 15px;
+                border-radius: 3px;
+                border:none;
+                box-shadow: 0 0 5px pink;
+                /* color: pink; */
+            }
+            /* vh - viewport height */
+            /* 1920 - 400 = 1520 / 2  = 760*/

@@ -1,0 +1,187 @@
+
+
+body{
+    background-image: url('./1.jpg');
+    background-repeat: no-repeat;
+    background-size: 300px;
+    /* background-position: 30px; */
+    background-attachment: fixed;
+}
+
+/* Media Rules or query */
+@font-face {
+    font-family: "marathi";
+    src: url('./Aarti.ttf');
+    font-size: 32px;
+}
+
+.fonts{
+    text-transform: uppercase;
+    color: red;
+    line-height: 1.5;
+    text-shadow: 1px 1px 3px red;
+    text-align: left;
+    text-indent: 40px;
+    /* letter-spacing:20px; */
+    /* font-family:'marathi' */
+}
+
+.menu a{
+    text-decoration: none;
+}
+.menu{
+    height: 30px;
+    width: 60px;
+    margin: 10px;
+    padding: 10px;
+    background-color: red;
+    float: left;
+}
+
+
+/* 
+
+id - #
+class - .
+tag - tag eg.table
+attr - input[type="email"]
+universal - *
+parent>child --- it is for direct child
+parent child --- it is for all child
+*/
+
+.box-1{
+    background-color: orange;
+    max-height: 400px;
+    min-height: 100px;
+
+    width: 200px;
+    /* padding-top: 20px; */
+    padding: 20px 10px 30px 40px;
+    /* margin:20px; */
+    /* margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px; */
+    margin: 20px 30px 50px 70px; 
+    /* top right bottom left  */
+    /* top/bottom right/left */
+    /* top right/left bottom */
+    /* border-width: 3px;
+    border-style: solid;
+    border-color: blue; */  
+    /* visibility: hidden; */
+    /* display: none; */
+    /* left-top/right-bottom right-top/left-bottom  */
+    border-radius: 50%;
+    border:3px solid blue;
+    overflow:hidden;
+    box-shadow: 0px 0px 10px black;
+}
+input[type='email']{
+    text-transform: uppercase;
+}
+
+.menu-1{
+    /* list-style: none; */
+    /* list-style-image: url(./mail.png);
+    list-style-position: outside; */
+    text-transform: capitalize;
+    list-style: circle outside;
+}
+#gb{
+    z-index: 999;
+}
+
+#gb thead{
+    background-color: blue;
+}
+#gb tbody tr{
+    
+    empty-cells: hide;
+}
+
+#gb td,th{
+   border: 1px solid red;
+   padding: 20px;
+}
+#gb{
+    border-spacing: 20px;
+}
+#gb tr:hover{
+    background-color: silver;
+}
+.name-input{
+    padding-left: 22px;
+    background-image: url(./mail.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: 3px;
+    border-bottom: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+.btn{
+    border: none;
+    background-color: blue;
+    border-radius: 3px;
+    color: white;
+    box-shadow: 0px 0px 5px black;
+}
+.reset{
+ background-color: red;
+}
+
+.submit{
+ background-color: dodgerblue;
+}
+
+fieldset{
+    border-radius: 5px;
+}
+
+legend{
+    border:1px solid slategray;
+    background-color: silver;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.add{
+    width: 70px;
+}
+.add-image{
+    background-image: url(./sp-removebg-preview.png);
+    background-position: -71px 334px;
+    background-size: 130px;
+    padding: 0px 6px;
+    
+}
+
+.minus{
+    background-image: url('./sp.jpg');
+}
+
+
+.layout{
+    position: absolute;
+    background-color: red;
+    height: 300px;  
+    width: 300px;
+    left: 200px;
+    top: 200px;
+    z-index: -1;
+
+}
+
+.layout1{
+    position: fixed;
+    background-color: yellow;
+    height: 100px;  
+    width: 100px;
+    left:200px;
+    top:200px;
+    z-index: -1;
+}

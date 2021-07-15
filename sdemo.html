@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <style>
+            .main-form{
+                /* border: 3px double silver;
+                border-radius: 10px; */
+                width: 300px;
+                height: 300px;
+                margin-left: calc(50vw - 150px);
+                margin-top: calc(50vh - 150px);
+                /* padding: 20px; */
+
+                
+            }
+            .main-form>fieldset{
+                padding: 20px;
+                 border: 3px double silver;
+                border-radius: 10px;
+            }
+
+            .main-form>fieldset>legend{
+                background-color: silver;
+                border: 2px solid silver;
+                padding: 5px 10px;
+                border-radius: 10px;
+            }
+            .form-control{
+                display: block;
+                width: 100%;
+                padding: 5px 5px 5px 40px;
+                margin-top: 5px;
+                margin-bottom: 10px;
+                border-radius: 3px;
+                font-size: 18px;
+                outline: none;
+                border-left: none;
+                border-right: none;
+                border-top:none;
+                background-position: 7px 5px;
+                background-repeat: no-repeat;
+            }
+            #email{
+                background-image: url('./mail.png'); 
+            }
+            #mobile{
+                background-image: url('./mobile.png'); 
+            }
+            #password{
+                /* cursor: n-resize; */
+                background-image: url('./password.png'); 
+            }
+
+            .form-group-btn{
+                float: right;
+            }
+            .btn{
+                padding: 5px 10px;
+                border-radius:5px;
+                border:none;
+            }
+            .btn-danger{
+                background-color: red;
+            }
+            .btn-success{
+                background-color: skyblue;
+            }
+
+        </style>
+    </head>
+    <body>
+        <form class="main-form">
+            <fieldset>
+            <legend>Login Form</legend>
+            <div class="form-group">
+                <label>Full Name</label>
+                <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input class="form-control" id="email" type="email">
+            </div>
+            <div class="form-group">
+                <label>Mobile</label>
+                <input class="form-control" id="mobile" type="mobile">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input class="form-control" id="password" type="password">
+            </div>
+
+            <div class="form-group-btn">
+                <button class="btn btn-danger" type="reset">Cancel</button>
+                <button class="btn btn-success" type="submit">Login</button>
+            </div>
+            
+            </fieldset>
+        </form>
+        <div style="width: 100px; height: 100px; top: 0px; left: 300px; position: absolute;
+        background-color: yellow; "> </div>
+    </body>
+</html>
+

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- external css -->
+    <link href="./123.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        #box-model {
+            /* background-color: black; */
+            color: red;
+            /* overflow-y: scroll; */
+            min-height: 400px;
+            max-height: 600px;
+            width: 400px;
+
+            border: 30px solid;
+            /* border-width: 3px;
+            border-style: double;
+            border-color: yellow; */
+
+            /* border-radius: 90% 2% 90% 2%; */
+            /* 50- top left,bottom right */
+            /* 25- top right,bottom left */
+            /* border-spacing: 30px; */
+            margin: 50px;
+            /* padding: 50px; */
+            box-shadow: 10px 10px 20px green;
+            border-image: url("./chapter-05/images/quokka.jpg");
+
+        }
+
+        #box-model>p {
+            /* display: none; */
+        }
+
+        #box-model>span {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="box-model">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque exercitationem nihil eligendi unde nulla harum sapiente dicta, blanditiis ex pariatur saepe doloremque atque impedit, magnam, autem placeat nostrum nisi veritatis.</p>
+        <span>Gopal Thakur</span>
+        <span>Nanded</span>
+    </div> -->
+    
+    <div class="layout">
+        
+        <div class="layout1">
+            Hi this is inner class
+        </div>
+        this is outer class
+    </div>
+
+
+    <!-- <div style="background-color: red;">&nbsp;</div> -->
+    <button class="add">
+        <span>Add</span>
+        <span class="add-image">&nbsp;
+            
+        </span></button>
+    <button class="minus">Remove</button>
+
+    <table id="gb"> 1
+        <tbody>
+            <tr>
+                <td>Gopal 1</td>
+                <td>Nanded 1</td>
+            </tr>
+            <tr>
+                <td>Gopal 2</td>
+                <td>Nanded 2</td>
+            </tr>
+            <tr>
+                <td>Gopal 2</td>
+                <td></td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="2"><b>Footer</b></td>
+            </tr>
+        </tfoot>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>City</th>
+            </tr>
+        </thead>
+    </table>
+
+    <!-- METHODS == GET,POST,PUT,DELETE,PATCH,OPTION -->
+    <!-- inline css -->
+    <form method="POST" action="url/server" >
+        <fieldset>
+            <legend>Registration</legend>
+        <table>
+            <tr>
+                <td> <label>Name</label></td>
+                <td><input type="text" class="name-input" name="fullname" placeholder="Full Name"></td>
+            </tr>
+
+
+            <tr>
+                <td><label>Email</label></td>
+                <td> <input type="email" name="email" class="gb" placeholder="Email ID"></td>
+            </tr>
+            <tr>
+                <td><label>Password</label></td>
+                <td><input type="password" class="gb" name="password" placeholder="Password"></td>
+            </tr>
+
+            <tr>
+                <td><label>DOB</label></td>
+                <td><input type="date" id="dd1" class="gb" name="dob"></td>
+            </tr>
+
+            <tr>
+                <td><label>DOJ</label></td>
+                <td><input type="date" name="doj"></td>
+            </tr>
+            <tr>
+                <td><label>Members</label></td>
+                <td><input type="number" name="mnumber" placeholder="Members" min="0" step="2" max="10"></td>
+            </tr>
+
+
+            <tr>
+                <td><label>URL</label></td>
+                <td><input type="url" name="url" class="gb" placeholder="URL"></td>
+                <!-- <input type="hidden"> -->
+
+            <tr>
+                <td><label>Gender</label></td>
+                <td> <input type="radio" name="gender"> Male
+                    <input type="radio" name="gender"> Female
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Language</label></td>
+                <td><input type="checkbox" name="LHindi"> Hindi
+                    <input type="checkbox" name="LMarathi"> Marathi
+                    <input type="checkbox" name="LEnglish"> English
+                    <select multiple>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>A</option>
+                        <option>B</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Address</label></td>
+                <td><textarea>Address </textarea></td>
+            </tr>
+            <tr>
+                <td><button class="btn submit" type="submit">
+                        Save
+                    </button></td>
+                <td>
+                    <button class="btn reset" type="reset">
+                        Reset
+                    </button>
+                    
+                </td>
+
+            </tr>
+        </table>
+    </fieldset>
+    </form>
+
+    <p class="fonts">Lorem ipsum dolor sit amet consectetur adipisicing elit.<img src="bjg.jpg" width="200" height="200"
+            align="bottom" alt="image_title"> Rerum enim laboriosam reprehenderit nihil, quam nulla illum molestiae
+        saepe itaque neque voluptatibus molestias dignissimos qui fuga totam alias accusamus velit officiis.</p>
+
+    <ul style="list-style: none;">
+        <li class="menu"><a href="#">Home 1</a></li>
+        <li class="menu"><a href="#">Home 2</a></li>
+        <li class="menu"><a href="#">Home 3</a></li>
+        <li class="menu"><a href="#">Home 4</a></li>
+    </ul>
+    <br>
+
+    <ul type="square">
+        <li>Item 1</li>
+        <li>Item 2
+            <ol type="1" start="2">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ol>
+        </li>
+        <li>Item 3</li>
+    </ul>
+
+    <dl>
+        <dt>Array</dt>
+        <dd>is collection of data</dd>
+        <dt>Array</dt>
+        <dd>is collection of data</dd>
+        <dt>Array</dt>
+        <dd>is collection of data</dd>
+        <dt>Array</dt>
+        <dd>is collection of data</dd>
+
+    </dl>
+
+    <video height="200" width="200" poster="./1.jpg" src="./chapter-09/video/puppy.mp4" preload controls>
+        <source src="/chapter-09/video/puppy.mp4">
+        <source src="/chapter-09/video/puppy.mp4">
+        <source src="/chapter-09/video/puppy.mp4">
+    </video>
+    <audio src="./chapter-09/audio/test-audio.mp3" controls></audio>
+
+    <iframe width="300" height="300" src="https://google.com"></iframe>
+
+
+    <div class="box-1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </div>
+
+    <ul class="menu-1">
+        <li>Home</li>
+        <li>about</li>
+        <li>contact</li>
+        <li>more</li>
+    </ul>
+</body>
+
+<form>
+    <label>Name</label>
+    <input placeholder="Name"><br>
+    <label>DOJ</label>
+    <input type="date">
+</form>
+
+</html>
